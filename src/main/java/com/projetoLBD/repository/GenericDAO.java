@@ -25,16 +25,22 @@ public class GenericDAO<T extends EntidadeBase> {
 
     public T salvarOuAlterar(T entidade) {
         EntityTransaction transaction = entityManager.getTransaction();
+        boolean isNewTransaction = false;
         try {
-            transaction.begin();
+            if (!transaction.isActive()) {
+                transaction.begin();
+                isNewTransaction = true;
+            }
             if (Objects.isNull(entidade.getId())) {
                 entityManager.persist(entidade);
             } else {
                 entidade = entityManager.merge(entidade);
             }
-            transaction.commit();
+            if (isNewTransaction) {
+                transaction.commit();
+            }
         } catch (Exception e) {
-            if (transaction.isActive()) {
+            if (isNewTransaction && transaction.isActive()) {
                 transaction.rollback();
             }
             throw e;
@@ -44,13 +50,19 @@ public class GenericDAO<T extends EntidadeBase> {
 
     public void remover(T entidade) {
         EntityTransaction transaction = entityManager.getTransaction();
+        boolean isNewTransaction = false;
         try {
-            transaction.begin();
+            if (!transaction.isActive()) {
+                transaction.begin();
+                isNewTransaction = true;
+            }
             entityManager.remove(entityManager.contains(entidade) ? entidade : entityManager.merge(entidade));
             entityManager.flush();
-            transaction.commit();
+            if (isNewTransaction) {
+                transaction.commit();
+            }
         } catch (Exception e) {
-            if (transaction.isActive()) {
+            if (isNewTransaction && transaction.isActive()) {
                 transaction.rollback();
             }
             throw e;

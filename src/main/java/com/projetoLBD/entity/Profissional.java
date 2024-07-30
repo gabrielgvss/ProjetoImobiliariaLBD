@@ -30,7 +30,7 @@ public @Data class Profissional implements EntidadeBase {
     @Column
     private String obs;
 
-    @OneToMany(mappedBy = "profissional")
+    @OneToMany(mappedBy = "profissional", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private Set<ServicoImovel> servicos = new HashSet<>();
 
 }

@@ -5,30 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f714f542-82c6-4480-90fa-ccc01e262e12" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/entity/Aluguel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/entity/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/entity/EntidadeBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/entity/Imovel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/entity/Locacao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/entity/Profissional.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/entity/ServicoImovel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/entity/TipoImovel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/repository/AluguelRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/repository/ClienteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/repository/GenericDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/repository/ImovelRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/repository/LocacaoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/repository/ProfissionalRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/repository/ServicoImovelRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/service/PagamentoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/teste/Imoveis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/teste/Profissionais.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projetoLBD/entity/Profissional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/entity/Profissional.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projetoLBD/entity/ServicoImovel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projetoLBD/entity/ServicoImovel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +44,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Alugueis.executor": "Run",
+    "Application.Imoveis.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.Profissionais.executor": "Run",
     "Maven.ProjetoImobiliariaLBD [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -92,6 +79,7 @@
       <updated>1722005691201</updated>
       <workItem from="1722005692289" duration="12093000" />
       <workItem from="1722083811177" duration="20572000" />
+      <workItem from="1722371444936" duration="3864000" />
     </task>
     <servers />
   </component>

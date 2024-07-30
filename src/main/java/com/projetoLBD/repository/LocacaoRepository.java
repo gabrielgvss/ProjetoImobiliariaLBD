@@ -23,23 +23,29 @@ public class LocacaoRepository extends GenericDAO<Locacao> {
         return count == 0;
     }
 
-
+    @Override
     public Locacao salvarOuAlterar(Locacao locacao) {
         if (!isImovelDisponivel(locacao.getImovel())) {
             throw new IllegalStateException("O imóvel não está disponível para locação.");
         }
 
         EntityTransaction transaction = getEntityManager().getTransaction();
+        boolean isNewTransaction = false;
         try {
-            transaction.begin();
+            if (!transaction.isActive()) {
+                transaction.begin();
+                isNewTransaction = true;
+            }
             if (locacao.getId() == null) {
                 getEntityManager().persist(locacao);
             } else {
                 locacao = getEntityManager().merge(locacao);
             }
-            transaction.commit();
+            if (isNewTransaction) {
+                transaction.commit();
+            }
         } catch (Exception e) {
-            if (transaction.isActive()) {
+            if (isNewTransaction && transaction.isActive()) {
                 transaction.rollback();
             }
             throw e;

@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity @Table(name="Servicos_Imovel")
@@ -18,7 +19,7 @@ public @Data class ServicoImovel implements EntidadeBase{
     private Imovel imovel;
 
     @Column(name="data_servico")
-    private Date dataServico;
+    private LocalDate dataServico;
 
     @Column (name="valor_total", precision = 10, scale=2)
     private BigDecimal valorTotal;
